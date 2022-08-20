@@ -1,4 +1,14 @@
 #include <stdio.h>
+/* avoid magic numbers and define constant values */
+#define LOWER 0
+#define UPPER 300
+#define STEP 20
+
+main() {
+    int fahr;
+    for (fahr = LOWER; fahr <= UPPER; fahr = fahr + STEP )
+        printf("%4d %6.1f\n", fahr, (5.0/9.0)*(32-fahr));
+}
 
 /* print Fahrenheit-Celcius table
 for f = 0, 20, ..., 300 */
@@ -46,13 +56,15 @@ must declare variables and types before using them
 scanf must accept the same data type as declared above*/
 
 /* Alternative code, also for loop */
+/*
 main()  
 {
     int fahr;
     for(fahr = 300; fahr >= 0; fahr = fahr - 20)
         printf("%4d %6.1f\n", fahr, (5.0/9.0)*(fahr-32));
+        */
 /*
     for(fahr = 0; fahr <= 300; fahr = fahr + 20)
         printf("%4d %6.1f\n", fahr, (5.0/9.0) * (fahr-32));
-*/
 }
+*/
