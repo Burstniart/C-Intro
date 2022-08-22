@@ -35,6 +35,7 @@
         printf("%.0f\n", nc); */
 
 /* ctrl + D to signal EOF, else program gets stuck inside loops */
+
 /* line counting
 also  single quotes are known as character constants
 \n is a single character  */
