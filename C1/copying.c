@@ -36,11 +36,11 @@
 
 /* ctrl + D to signal EOF, else program gets stuck inside loops */
 /* line counting
-also using single quotes is necessary, otherwise it says
-something bout pointers and ints  */
+also  single quotes are known as character constants
+\n is a single character  */
     int c, nl;
     nl = 0;
-    
+
     while ((c = getchar()) != EOF)      
         if (c == '\n')
             ++nl;
