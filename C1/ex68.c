@@ -8,6 +8,7 @@ and each backspace by the similar sequence <. This makes tabs and backspaces vis
 
 #include <stdio.h>
 main() {
+    /* ex 6
     int blnks, tbs, nls, c, chars;
     blnks = 0;
     tbs = 0;
@@ -23,5 +24,6 @@ main() {
             ++nls;
     }
     printf("%d %d %d\n", blnks, tbs, nls);
+*/
 
 }
