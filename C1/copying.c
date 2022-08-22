@@ -40,6 +40,7 @@ also using single quotes is necessary, otherwise it says
 something bout pointers and ints  */
     int c, nl;
     nl = 0;
+    
     while ((c = getchar()) != EOF)      
         if (c == '\n')
             ++nl;
