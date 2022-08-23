@@ -7,6 +7,10 @@ and each backspace by the similar sequence <. This makes tabs and backspaces vis
  */
 
 #include <stdio.h>
+
+#define YES 1
+#define NO  0
+
 main() {
     /* ex 6
     int blnks, tbs, nls, c, chars;
@@ -25,5 +29,30 @@ main() {
     }
     printf("%d %d %d\n", blnks, tbs, nls);
 */
-
+    /* ex 7 replaces +1 blanks to just one / doesnt react to tabs and prints with newlines 
+    int c, stop;
+    while((c = getchar()) != EOF) {
+        if (c == ' ' && stop == NO) {
+            putchar(c);
+            stop = YES;
+        }
+        else if (c == ' ' && stop == YES ) 
+            ;
+        else {
+            putchar(c);
+            stop = NO;
+        }
+    }*/
+    /* ex 8 make tabs and backspaces visible*/
+    int c, i;
+    while((c = getchar()) != EOF) 
+        if(c == '\b') {
+        putchar('a');}
+        else if(c == '\t') {
+        printf("tabs");
+            for (i = 0; i < 2; ++i)
+                putchar('>');}
+        else
+            putchar(c);
+    
 }
