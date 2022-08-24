@@ -12,7 +12,7 @@ for example, a sequence of letters, digits and apostrophes that begins with a le
 #define YES 1
 #define NO  0
 
-main() {/* ex 10 print each word in a new line*/
+main() {/* ex 10 print each word in a new line
     int c, inword;
     while ((c = getchar()) != EOF) {
         if (c == ' ' || c == '\t') {
@@ -20,6 +20,24 @@ main() {/* ex 10 print each word in a new line*/
             putchar('\n');}
         else 
         putchar(c);
-    }
+    } */
 
+    /*ex 11
+    int c, nl, nw, nc, inword;
+
+    inword = NO;
+    nl = nw = nc = 0;
+    while ((c = getchar()) != EOF) {
+        ++nc;
+        if (c == '\n')
+            ++nl;
+        if (c == ' ' || c == '\n' || c == '\t')
+            inword = NO;
+        else if (inword == NO) {
+            inword = YES;
+            ++nw;
+        }
+    }
+    printf("%d %d %d\n", nl, nw, nc);
+    */
 }
