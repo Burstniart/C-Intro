@@ -2,6 +2,7 @@
 main() { /* counts digits, white space (blank, tab, newline) and 
 other characters */
     int c, i, nwhite, nother;
+    
     int ndigit[10];
     
     nwhite = nother = 0;

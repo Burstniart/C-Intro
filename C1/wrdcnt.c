@@ -19,7 +19,7 @@ main() {
             ++nw;
         }
     }
-    printf("%d %d %d\n", nl, nw, nc);
+    printf("%d %dk %d\n", nl, nw, nc);
 }
 
-
+    
