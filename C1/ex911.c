@@ -8,6 +8,18 @@ Exercise 1-11. Revise the word count program to use a better definition of "word
 for example, a sequence of letters, digits and apostrophes that begins with a letter. */
 
 #include <stdio.h>
-main() {
+
+#define YES 1
+#define NO  0
+
+main() {/* ex 10 print each word in a new line*/
+    int c, inword;
+    while ((c = getchar()) != EOF) {
+        if (c == ' ' || c == '\t') {
+            putchar('\b');
+            putchar('\n');}
+        else 
+        putchar(c);
+    }
 
 }
