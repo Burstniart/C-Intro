@@ -13,8 +13,9 @@ int x, n;
 {
     int i, p;
 
-    p = 1;
-    for (i = 1; i <= n; ++i)
+    /*p = 1;
+     for (i = 1; i <= n; ++i) */
+    for (p = 1; n > 0; --n) 
         p = p * x;
     return (p);
 }
