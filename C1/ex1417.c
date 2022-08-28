@@ -20,7 +20,7 @@ main() {
     int i, c;
 
     for (i = 0; (c = getchar()) != EOF && c != '\n'; i++) {
-        line[i] = c;
+        line[i] = c;;
     }
     
     reverse(line, i, save);
@@ -34,11 +34,11 @@ int length;
 {
     int i, j;
     j = 0;
-    printf("%d",length);
     for (i = length -1; i >= 0; i--) {
         output[j] = input[i];
         j++;
     }
+    output[j] = ' ';
 
 
 
