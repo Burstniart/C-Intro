@@ -12,7 +12,46 @@ Exercise 1-17. Write a function reverse(s) which reverses the character string s
 #define MAXLINE 1000
 
 main() {
-    /* ex 17: reverse string one line at a time */
+    /* ex 15: print lines bigger than 80 */
+    int len;
+    int max;
+    char line[MAXLINE];
+    char save[MAXLINE];
+
+    max = 0;
+    while ((len = get_line(line, MAXLINE)) > 0)
+        if ( len > 80) {
+            max = len;
+            copy(line, save);
+        }
+    if (max > 0){
+        printf("%s", save);
+    }
+}
+get_line(s, lim)
+char s[];
+int lim;
+{
+    int c, i;
+    for (i = 0; i < lim-i && (c = getchar()) != EOF && c !='\n'; ++i)
+        s[i] = c;
+    if (c == '\n') {
+        s[i] = c;
+        ++i;
+    }
+    s[i] = '\0';
+    return(i);
+}
+copy(s1, s2)
+char s1[], s2[];
+{
+    int i;
+    i = 0;
+    while((s2[i] = s1[i]) != '\0')
+        ++i;
+
+
+    /* ex 17: reverse string one line at a time 
    
     char line[MAXLINE];
     char save[MAXLINE];
@@ -39,7 +78,7 @@ int length;
         j++;
     }
     output[j] = ' ';
-
+*/
 
 
     /* ex 14: print length of the input and as much text as possible
