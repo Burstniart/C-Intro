@@ -1,10 +1,23 @@
 #include <stdio.h>
+#define YES 1
+#define NO 0
+
 main() {
     printf("Hello, Monika!\n");
-    long nc;
+    int c, nl, nw, nc, inword;
 
-    nc = 0;
-    while (getchar() != EOF)    
+    inword = NO;
+    nl = nw = nc = 0;
+    while ((c = getchar()) != EOF) {    
 	    ++nc;
-    printf("%ld\n", nc);
+	    if (c == '\n')
+	            ++nl;
+	    if (c == ' ' || c == '\n' || c == '\t')
+		    inword = NO;
+	    else if (inword == NO) {
+	    	    inword = YES;
+	    	    ++nw;
+	    }
+    }
+    printf("\n%d %d %d\n", nl, nw, nc);
 }
