@@ -4,20 +4,15 @@
 
 main() {
     printf("Hello, Monika!\n");
-    int c, nl, nw, nc, inword;
+    int i;
+    for (i = 0; i < 10; ++i)
+	    printf("%d %d %d\n", i, power(2,i), power(-3,i));
+}
 
-    inword = NO;
-    nl = nw = nc = 0;
-    while ((c = getchar()) != EOF) {    
-	    ++nc;
-	    if (c == '\n')
-	            ++nl;
-	    if (c == ' ' || c == '\n' || c == '\t')
-		    inword = NO;
-	    else if (inword == NO) {
-	    	    inword = YES;
-	    	    ++nw;
-	    }
-    }
-    printf("\n%d %d %d\n", nl, nw, nc);
+power(x,n)
+	int x,n; {
+	int i, p;
+	for(p = 1; n > 0; --n)
+		p = p * x;
+	return (p);
 }
