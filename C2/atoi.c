@@ -1,18 +1,42 @@
 #include <stdio.h>
-#define YES 1
-#define NO 0
+
+#define MAXLINE 1000
 
 main() {
-    printf("Hello, Monika!\n");
-    int i;
-    for (i = 0; i < 10; ++i)
-	    printf("%d %d %d\n", i, power(2,i), power(-3,i));
+    int len, max;
+    char line[MAXLINE], save[MAXLINE];
+
+    max = 0;
+    while ((len = get_line(line, MAXLINE)) > 0)
+	    if (len > max) {
+	    	max = len;
+		copy(line, save);
+	    }
+    if (max > 0)
+	    printf("%s", save);
 }
 
-power(x,n)
-	int x,n; {
-	int i, p;
-	for(p = 1; n > 0; --n)
-		p = p * x;
-	return (p);
+get_line(s, lim)
+char s[];
+int lim;
+{
+    int c, i;
+    for (i=0; i<lim-1 && (c=getchar()) != EOF && c!='\n'; ++i)
+	    s[i] = c;
+    if (c == '\n') {
+	    s[i] = c;
+    	    ++i;
+    }
+    s[i] = '\0';
+    return(i);
+}
+
+copy(s1, s2)
+char s1[], s2[];
+{
+    int i;
+
+    i = 0;
+    while ((s2[i] = s1[i]) != '\0')
+	    ++i;
 }
