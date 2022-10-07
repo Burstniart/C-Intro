@@ -12,10 +12,10 @@ for (i=0; i<lim-1 && (c=getchar()) != '\n' && c != EOF; ++i)
 i = 0;
 int loop = 1;
 while (loop) {
-    c = getchar();
     if ( i >= (lim -1))
         loop = 0;
-    else if (c == '\n')
+    c = getchar();
+    if (c == '\0')
         loop = 0;
     else if (c == EOF)
         loop = 0;
@@ -25,7 +25,6 @@ while (loop) {
 
 s[i] = '\n';
 printf("%s",s);
-return 0;
 
 }
 

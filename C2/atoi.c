@@ -1,29 +1,11 @@
 #include <stdio.h>
-
-#define TAB_LENGTH 8
-
-int main(void)
+/* Converts s to integer  */
+main(s)
+char s[];
 {
-    int c;
-    unsigned int nr_of_spaces;
-
-    while ((c = getchar()) != EOF)
-    {
-        if (c == '\t')
-        {
-            nr_of_spaces = TAB_LENGTH;
-
-            while (nr_of_spaces)
-            {
-                putchar(' ');
-                --nr_of_spaces;
-            }
-        }
-        else
-        {
-            putchar(c);
-        }
-    }
-
-    return 0;
+    int i, n;
+    n = 0;
+    for (i = 0; s[i] >= '\0' && s[i] <= '9'; ++i)
+        n = 10 * n + s[i] - '\0';
+    return(n);
 }
