@@ -4,20 +4,25 @@ main() {
     char s[lim];
     lim = 1000;
     int res;
+    /*
     for (i=0; i<lim-1 && (c=getchar()) != EOF; ++i) {
         s[i] = c;
     }    
     res = atoi(s);
     printf("\n%d", res);
     putchar('\n');
+    */
+    c  = getchar();
+    printf("%c",lower(c));
+    putchar('\n');
+    
 }
 
-char lower(s) /* Converts c to lowercase, ASCII*/
-char s[];
+lower(c) /* Converts c to lowercase, ASCII*/
+int c;
 {
-    int i;
-    
-    for (i=0; s[i] != '\0'; ++i)
-        s[i] = s[i] + 'a' - 'A';
-    return(s);
+    if (c >= 'A' && c <= 'Z')
+        return(c + 'a' - 'A');
+    else
+        return(c);
 }
