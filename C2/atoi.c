@@ -2,7 +2,7 @@
 /* Converts s to integer  */
 main() {
     int i, lim;
-    char c;
+    int  c;
     char s[lim];
     lim = 1000;
 
