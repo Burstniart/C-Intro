@@ -4,18 +4,18 @@ main() {
     char s[lim];
     lim = 1000;
     int res;
-    /*
-    for (i=0; i<lim-1 && (c=getchar()) != EOF; ++i) {
-        s[i] = c;
+    
+    for (i=0; i<lim-1 && (c=getchar()) != '\n' && c != EOF; ++i) {
+        s[i] = lower(c);
     }    
-    res = atoi(s);
-    printf("\n%d", res);
+    
+    printf("%s", s);
     putchar('\n');
-    */
+    /*
     c  = getchar();
     printf("%c",lower(c));
     putchar('\n');
-    
+    */
 }
 
 lower(c) /* Converts c to lowercase, ASCII*/
