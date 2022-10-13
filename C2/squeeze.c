@@ -4,16 +4,16 @@
 main() {
     int i, lim, c;
     char s[lim];
-    char res;
     lim = 100;
+    char take;
 
     for(i = 0; i<lim-1 && (c=getchar()) != '\n' && c != EOF; ++i) {
         s[i] = c;
     }
-    printf("%s",s);
-    putchar('\n');
-    res = squeeze(s, 'b');
-    printf("%s",res);
+    printf("Take away a character: ");
+    scanf("%c", &take);
+    printf("Now let's take away the %c\n", take);
+    squeeze(s, take);
     putchar('\n');
 }
 
@@ -22,13 +22,9 @@ char s[];
 int c;
 {
     int i, j;
-    char k[];
-    for (i = j = 0; s[i]!= '\0'; i++) {
-        if (s[i] != c) {
-            k[j++] = s[i];    
-        }
-    }
-    k[j] = '\0';
-    return k;
-
+    for (i = j = 0; s[i]!= '\0'; i++) 
+        if (s[i] != c) 
+            s[j++] = s[i];    
+    s[j] = '\0';
+    printf("%s",s);
 }
