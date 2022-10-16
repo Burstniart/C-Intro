@@ -44,8 +44,8 @@ char A[], B[];
         for (i = 0; A[i] != '\0'; ++i) {
             if (B[k] == A[i]) {
                 p = i; 
+                return p;
             }
         }
     }
-    return p;
 }
