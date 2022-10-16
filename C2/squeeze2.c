@@ -12,7 +12,10 @@ main() {
     for(i = 0; i < 99 && (c = getchar()) != '\n' && c != EOF; i++) {
         r[i] = c;
     }
-    squeeze(s,r);
+/*    squeeze(s,r); */
+    int pos = any(s, r);
+    printf("Characters searched, position: ");
+    printf("%d", pos);
     putchar('\n');
 }
 
@@ -32,3 +35,17 @@ char A[], B[];
   printf("%s",A);
 }
 
+any(A, B)
+char A[], B[];
+{
+    int i,k, p;
+    p = -1;
+    for (k = 0; B[k] != '\0'; ++k) {
+        for (i = 0; A[i] != '\0'; ++i) {
+            if (B[k] == A[i]) {
+                p = i; 
+            }
+        }
+    }
+    return p;
+}
