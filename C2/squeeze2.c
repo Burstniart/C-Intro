@@ -14,9 +14,7 @@ main() {
     }
 /*    squeeze(s,r); */
     int pos = any(s, r);
-    printf("Characters searched, position: ");
-    printf("%d", pos);
-    putchar('\n');
+    printf("Characters searched, position: %d\n", pos);
 }
 
 squeeze(A, B)
